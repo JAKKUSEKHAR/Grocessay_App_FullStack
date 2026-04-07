@@ -5,7 +5,7 @@ import Cart from "./pages/Cart";
 import { fetchProducts } from "./api/productApi";
 import Orders from "./pages/Orders";
 import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import Signup from "./pages/Signup";
 import Navbar from "./components/Navbar";
 import AddProduct from "./pages/Admin/AddProduct";
 import AdminRoute from "./pages/Admin/AdminRoute";
