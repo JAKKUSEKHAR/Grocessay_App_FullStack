@@ -5,7 +5,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn , role , setRole }) {
   return (
     <nav className="navbar">
       <div className="logo">
-        Tap<span>It</span>
+        Grocessary<span>Home</span>
       </div>
 
 <div className="nav-links">
