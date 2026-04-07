@@ -142,7 +142,7 @@ export default App;
 // import Cart from "./pages/Cart";
 // import Orders from "./pages/Orders";
 // import Login from "./pages/Login";
-// import Signup from "./pages/SignUp";
+// import Signup from "./pages/Signup";   // previously here SignUp was there instead of Signup
 
 // import { fetchProducts } from "./api/productApi";
 
