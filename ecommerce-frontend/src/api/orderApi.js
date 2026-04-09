@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "https://ecommerce-backend-latest-d0jt.onrender.com";
 
 export const placeOrder = async (items) => {
   const payload = {
@@ -19,7 +19,7 @@ console.log("ORDER PAYLOAD:", payload);
 export const fetchOrders = async () => {
   const userId = localStorage.getItem("userId");
   const res = await axios.get(
-    `http://localhost:8080/api/orders?userId=${userId}`
+    `https://ecommerce-backend-latest-d0jt.onrender.com/api/orders?userId=${userId}`
   );
   console.log(res.data);
   return res.data;

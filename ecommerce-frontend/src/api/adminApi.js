@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const addProduct = (productData) => {
   return axios.post(
-    "http://localhost:8080/api/admin/products",
+    "https://ecommerce-backend-latest-d0jt.onrender.com/api/admin/products",
     productData,
     {
       headers: {
@@ -14,7 +14,7 @@ export const addProduct = (productData) => {
 }; 
 
 export const updateProduct = (id, data) =>
-  axios.put(`http://localhost:8080/api/admin/products/${id}`, data);
+  axios.put(`https://ecommerce-backend-latest-d0jt.onrender.com/api/admin/products/${id}`, data);
 
 export const deleteProduct = (id) =>
-  axios.delete(`http://localhost:8080/api/admin/products/${id}`);
+  axios.delete(`https://ecommerce-backend-latest-d0jt.onrender.com/api/admin/products/${id}`);

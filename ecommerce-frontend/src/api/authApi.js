@@ -15,7 +15,7 @@
 
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/auth";
+const BASE_URL = "https://ecommerce-backend-latest-d0jt.onrender.com/api/auth";
 
 export const loginUser = async (data) => {
   const res = await axios.post(

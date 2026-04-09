@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api";
+const BASE_URL = "https://ecommerce-backend-latest-d0jt.onrender.com/api";
 
 // const authHeader = () => ({
 //   headers: {
