@@ -31,8 +31,21 @@ export const fetchProductById = async (id) => {
 
 
 export const aiBot = async ()=>{
-  const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words");
-  console.log(res.data);
-  return res.data;
+  try{
+
+    const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words",
+      {
+        headers:{
+          "Content-Type":"text/plain"
+        }
+      }
+    );
+    console.log("AI Response --> ",res.data);
+    return res.data;
+  }
+  catch(err)
+  {
+  console.log("AI Error" , err);
+  }
 
 };
