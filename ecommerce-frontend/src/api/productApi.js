@@ -34,11 +34,11 @@ export const aiBot = async ()=>{
   try{
 
     const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words",
-      {
-        headers:{
-          "Content-Type":"text/plain"
-        }
-      }
+      // {
+      //   headers:{
+      //     "Content-Type":"text/plain"
+      //   }
+      // }
     );
     console.log("AI Response --> ",res.data);
     return res.data;
