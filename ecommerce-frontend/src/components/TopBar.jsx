@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import {aiBot} from "../api/productApi.js";
 
 function TopBar({ searchText, onSearch }) {
 
@@ -21,6 +22,11 @@ function TopBar({ searchText, onSearch }) {
           onChange={(e) => onSearch(e.target.value)}
         />
       </div>
+         
+        <div className="ai-bot"> 
+              <button onClick={}>AiBot</button>
+          </div>
+
       <Link to="/orders" className="orders-link">My Orders</Link>
     </div>
   );

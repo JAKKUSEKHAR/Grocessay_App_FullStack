@@ -28,3 +28,11 @@ export const fetchProductById = async (id) => {
   const res = await axios.get(`${BASE_URL}/products/${id}`);
   return res.data;
 };
+
+
+export const ai = async ()=>{
+  const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words");
+  console.log(res.text().data);
+  return res.test().data;
+
+};
