@@ -10,13 +10,14 @@ import com.ecommerce.common.service.AIService;
 
 @RestController
 @RequestMapping("api/ai")
-@CrossOrigin // for React
+@CrossOrigin("*") // for React
 public class AIController {
 
     private final AIService aiService;
 
     public AIController(AIService aiService) {
         this.aiService = aiService;
+        
     }
 
     @PostMapping("/ask")

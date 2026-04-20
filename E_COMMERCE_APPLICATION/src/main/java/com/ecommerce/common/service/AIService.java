@@ -10,11 +10,13 @@ public class AIService {
 
     private final WebClient webClient;
 
-    @Value("${gemini.api.key}")
+    
     private String apiKey;
 
-    public AIService() {
+    public AIService(@Value("${gemini.api.key}") String apiKey) {
         this.webClient = WebClient.create("https://generativelanguage.googleapis.com");
+        this.apiKey=apiKey;
+        System.out.println("API KEY : " + apiKey);
     }
 
     public String askAI(String prompt) {
@@ -28,21 +30,25 @@ public class AIService {
         """.formatted(prompt);
 
         return webClient.post()
-                .uri("/v1beta/models/gemini-pro:generateContent?key=" + apiKey)
-                .header("Content-Type", "application/json")
-                .bodyValue(requestBody)
-                .retrieve()
-                .bodyToMono(JsonNode.class)
-                .map(json -> json
-                .get("candidates")
-                .get(0)
-                .get("content")
-                .get("parts")
-                .get(0)
-                .get("text")
-                .asText()
-                   )
-                .block(); // blocking for simplicity
-                 
+        .uri("/v1beta/models/gemini-pro:generateContent?key=" + apiKey)
+        .header("Content-Type", "application/json")
+        .bodyValue(requestBody)
+        .retrieve()
+        .bodyToMono(JsonNode.class)
+        .map(json -> {
+            if (json.has("candidates")) {
+                return json
+                        .get("candidates")
+                        .get(0)
+                        .get("content")
+                        .get("parts")
+                        .get(0)
+                        .get("text")
+                        .asText();
+            } else {
+                return "Error: " + json.toString();
+            }
+        })
+        .block();
     }
 }
