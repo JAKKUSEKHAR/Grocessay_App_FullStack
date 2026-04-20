@@ -116,6 +116,13 @@
         <version>5.8.0</version>
     </dependency>
 		 
+    <!-- Spring Web (Rest + WebClient support) -->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-webflux</artifactId>
+    </dependency>
+ 
+
 	</dependencies>
 
 	<build>
