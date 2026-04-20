@@ -13,7 +13,7 @@ public class AIService {
     
     private String apiKey;
 
-    public AIService(@Value("${gemini.api.key}") String apiKey) {
+    public AIService(@Value("${GEMINI_API_KEY}") String apiKey) {
         this.webClient = WebClient.create("https://generativelanguage.googleapis.com");
         this.apiKey=apiKey;
         System.out.println("API KEY : " + apiKey);
