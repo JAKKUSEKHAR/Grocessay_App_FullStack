@@ -24,7 +24,7 @@ function TopBar({ searchText, onSearch }) {
       </div>
          
         <div className="ai-bot"> 
-              <button onClick={}>AiBot</button>
+              <button onClick={aiBot}>AiBot</button>
           </div>
 
       <Link to="/orders" className="orders-link">My Orders</Link>
