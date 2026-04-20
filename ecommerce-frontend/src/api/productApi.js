@@ -32,7 +32,7 @@ export const fetchProductById = async (id) => {
 
 export const aiBot = async ()=>{
   const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words");
-  console.log(res.text().data);
-  return res.test().data;
+  console.log(res.data);
+  return res.data;
 
 };
