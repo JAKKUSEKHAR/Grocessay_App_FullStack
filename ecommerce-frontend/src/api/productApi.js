@@ -33,7 +33,7 @@ export const fetchProductById = async (id) => {
 export const aiBot = async ()=>{
   try{
 
-    const res = await axios.post(`${BASE_URL}/api/ai/ask`,"Explain microservices in simple words",
+    const res = await axios.post(`${BASE_URL}/ai/ask`,"Explain microservices in simple words",
       // {
       //   headers:{
       //     "Content-Type":"text/plain"
