@@ -31,7 +31,7 @@ public class AIService {
         """.formatted(prompt);
 
         JsonNode json = webClient.post()
-                .uri("/v1/models/gemini-1.5-flash:generateContent?key=" + apiKey)
+                .uri("/v1beta/models/gemini-pro:generateContent?key=" + apiKey)
                 .header("Content-Type", "application/json")
                 .bodyValue(requestBody)
                 .retrieve()
